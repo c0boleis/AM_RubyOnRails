@@ -1,0 +1,592 @@
+Started GET "/" for 127.0.0.1 at 2017-08-02 10:52:34 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.2) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (124.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (78.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20170802085214)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170802085214"]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-02 08:53:01.624349"], ["updated_at", "2017-08-02 08:53:01.624349"]]
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-08-02 10:53:36 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account" for 127.0.0.1 at 2017-08-02 10:53:46 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/accounts" for 127.0.0.1 at 2017-08-02 10:53:55 +0200
+Processing by AccountsController#index as HTML
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (31.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 546ms (Views: 504.0ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2017-08-02 10:54:12 +0200
+Processing by AccountsController#new as HTML
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (14.0ms)
+  Rendered accounts/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 187ms (Views: 150.6ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/accounts" for 127.0.0.1 at 2017-08-02 10:54:20 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IxE5B96dteU4lTGwwwT7316wVAbvfDQEcpwyosQnqt4TLqLP4oKkQJSonBJ7l0TRUgg7OCkLFLTjxRiTgS3F3A==", "account"=>{"account_number"=>"0---------4"}, "commit"=>"Create Account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (65.0ms)[0m  [1m[32mINSERT INTO "accounts" ("account_number", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["account_number", "0---------4"], ["created_at", "2017-08-02 08:54:20.280301"], ["updated_at", "2017-08-02 08:54:20.280301"]]
+  [1m[35m (93.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/accounts/1
+Completed 302 Found in 169ms (ActiveRecord: 158.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 10:54:20 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 151ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20170802090044)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20170802085214)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "accounts"[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170802085214"]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAccounts (20170802085214)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170802085214"]]
+  [1m[35m (140.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTransactions (20170802090044)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20170802090435)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "date" date, "category" varchar, "comment" varchar, "amount" float, "done" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_01f020e267"
+FOREIGN KEY ("account_id")
+  REFERENCES "accounts" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_transactions_on_account_id" ON "transactions" ("account_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170802090435"]]
+  [1m[35m (202.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_account_id' AND type='index'
+[0m
+Started GET "/accounts" for 127.0.0.1 at 2017-08-02 11:05:07 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountsController#index as HTML
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 671ms (Views: 631.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2017-08-02 11:12:03 +0200
+Processing by AccountsController#new as HTML
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (19.0ms)
+  Rendered accounts/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 208ms (Views: 164.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/accounts" for 127.0.0.1 at 2017-08-02 11:12:11 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzhQUbWVkQ6lPaf5uIhhAakwZ77l2pwTCJb10mdznAIHB8uZiYqAqwkAClsAG94PpYgIgCOtvKOZz9/jInnzAA==", "account"=>{"account_number"=>"0---------4"}, "commit"=>"Create Account"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "accounts" ("account_number", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["account_number", "0---------4"], ["created_at", "2017-08-02 09:12:11.060819"], ["updated_at", "2017-08-02 09:12:11.060819"]]
+  [1m[35m (107.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/accounts/1
+Completed 302 Found in 115ms (ActiveRecord: 109.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:12:11 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.erb (288.0ms)
+  Rendered accounts/show.html.erb within layouts/application (365.0ms)
+Completed 500 Internal Server Error in 449ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transaction' for #<#<Class:0x64a15a0>:0x456c120>
+Did you mean?  transaction_url):
+    1: <%= form_with(model: transaction, local: true) do |form| %>
+    2:   <% if transaction.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+  
+app/views/transactions/_form.html.erb:1:in `_app_views_transactions__form_html_erb___1059986953_78319260'
+app/views/accounts/show.html.erb:11:in `_app_views_accounts_show_html_erb__442219675_36459096'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:16:27 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.erb (31.2ms)
+  Rendered accounts/show.html.erb within layouts/application (62.4ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/bat/Documents/informatique/web/ruby/rails/appAm/app/views/transactions/_form.html.erb:1: syntax error, unexpected ',', expecting =>
+...er.append=  form_for({@account, @account.transactions.build}...
+...                               ^
+C:/Users/bat/Documents/informatique/web/ruby/rails/appAm/app/views/transactions/_form.html.erb:1: syntax error, unexpected '}', expecting keyword_end
+...t, @account.transactions.build}) do |form| @output_buffer.sa...
+...                               ^
+C:/Users/bat/Documents/informatique/web/ruby/rails/appAm/app/views/transactions/_form.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/transactions/_form.html.erb:1: syntax error, unexpected ',', expecting =>
+app/views/transactions/_form.html.erb:1: syntax error, unexpected '}', expecting keyword_end
+app/views/transactions/_form.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/accounts/show.html.erb:11:in `_app_views_accounts_show_html_erb__442219675_53490528'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:16:58 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.erb (327.6ms)
+  Rendered accounts/show.html.erb within layouts/application (343.2ms)
+Completed 500 Internal Server Error in 421ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `account_transactions_path' for #<#<Class:0x64a15a0>:0xa508bf8>
+Did you mean?  accounts_path):
+    1: <%= form_for([@account, @account.transactions.build]) do |form| %>
+    2:   <% if transaction.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+  
+app/views/transactions/_form.html.erb:1:in `_app_views_transactions__form_html_erb___1059986953_99073044'
+app/views/accounts/show.html.erb:11:in `_app_views_accounts_show_html_erb__442219675_86526216'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:18:16 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.erb (296.4ms)
+  Rendered accounts/show.html.erb within layouts/application (343.2ms)
+Completed 500 Internal Server Error in 468ms (ActiveRecord: 15.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transaction' for #<#<Class:0x68426e8>:0x54bf610>
+Did you mean?  translate):
+    1: <%= form_for([@account, @account.transactions.build]) do |form| %>
+    2:   <% if transaction.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+    5: 
+  
+app/views/transactions/_form.html.erb:2:in `block in _app_views_transactions__form_html_erb___255134949_43515288'
+app/views/transactions/_form.html.erb:1:in `_app_views_transactions__form_html_erb___255134949_43515288'
+app/views/accounts/show.html.erb:11:in `_app_views_accounts_show_html_erb__678498945_54663096'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:19:20 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.erb (265.2ms)
+  Rendered accounts/show.html.erb within layouts/application (296.4ms)
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transaction' for #<#<Class:0x68426e8>:0x9414b28>
+Did you mean?  translate):
+    1: <%= form_for([@account, @account.transactions.build]) do |form| %>
+    2: <!--   <% if transaction.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+    5: 
+  
+app/views/transactions/_form.html.erb:2:in `block in _app_views_transactions__form_html_erb___255134949_55990344'
+app/views/transactions/_form.html.erb:1:in `_app_views_transactions__form_html_erb___255134949_55990344'
+app/views/accounts/show.html.erb:11:in `_app_views_accounts_show_html_erb__678498945_77637804'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:19:29 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.erb (249.6ms)
+  Rendered accounts/show.html.erb within layouts/application (280.8ms)
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transaction' for #<#<Class:0x68426e8>:0x69e3aa8>
+Did you mean?  translate):
+    1: <%= form_for([@account, @account.transactions.build]) do |form| %>
+    2: <!--   <% if transaction.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+    5: 
+  
+app/views/transactions/_form.html.erb:2:in `block in _app_views_transactions__form_html_erb___255134949_55371636'
+app/views/transactions/_form.html.erb:1:in `_app_views_transactions__form_html_erb___255134949_55371636'
+app/views/accounts/show.html.erb:11:in `_app_views_accounts_show_html_erb__678498945_56557728'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:20:15 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.erb (78.0ms)
+  Rendered accounts/show.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 484ms (Views: 463.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts/1/transactions" for 127.0.0.1 at 2017-08-02 11:20:54 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ugo8mNsj4cPheH3Y+BEe9e6lYcOAEtdSrc1rbjALNZWoBwRpp8lTOPmRLMcVhwGjmEK82YJb1x6WzPcZ5gy4wA==", "transaction"=>{"account_id"=>"1", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"1", "category"=>"rf", "comment"=>"45", "amount"=>"12", "done"=>"1"}, "commit"=>"Create Transaction", "account_id"=>"1"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "transactions" ("account_id", "date", "category", "comment", "amount", "done", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_id", 1], ["date", "2015-02-01"], ["category", "rf"], ["comment", "45"], ["amount", 12.0], ["done", "t"], ["created_at", "2017-08-02 09:20:55.038193"], ["updated_at", "2017-08-02 09:20:55.038193"]]
+  [1m[35m (187.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 368ms (ActiveRecord: 188.0ms)
+
+
+  
+NoMethodError (undefined method `transaction_url' for #<TransactionsController:0x8c18dc0>
+Did you mean?  transaction_params):
+  
+app/controllers/transactions_controller.rb:31:in `block (2 levels) in create'
+app/controllers/transactions_controller.rb:29:in `create'
+Started POST "/accounts/1/transactions" for 127.0.0.1 at 2017-08-02 11:25:40 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ugo8mNsj4cPheH3Y+BEe9e6lYcOAEtdSrc1rbjALNZWoBwRpp8lTOPmRLMcVhwGjmEK82YJb1x6WzPcZ5gy4wA==", "transaction"=>{"account_id"=>"1", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"1", "category"=>"rf", "comment"=>"45", "amount"=>"12", "done"=>"1"}, "commit"=>"Create Transaction", "account_id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  
+app/controllers/transactions_controller.rb:27:in `create'
+Started POST "/accounts/1/transactions" for 127.0.0.1 at 2017-08-02 11:26:36 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ugo8mNsj4cPheH3Y+BEe9e6lYcOAEtdSrc1rbjALNZWoBwRpp8lTOPmRLMcVhwGjmEK82YJb1x6WzPcZ5gy4wA==", "transaction"=>{"account_id"=>"1", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"1", "category"=>"rf", "comment"=>"45", "amount"=>"12", "done"=>"1"}, "commit"=>"Create Transaction", "account_id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 15.6ms)
+
+
+  
+NoMethodError (undefined method `transactions' for nil:NilClass):
+  
+app/controllers/transactions_controller.rb:28:in `create'
+Started POST "/accounts/1/transactions" for 127.0.0.1 at 2017-08-02 11:27:05 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ugo8mNsj4cPheH3Y+BEe9e6lYcOAEtdSrc1rbjALNZWoBwRpp8lTOPmRLMcVhwGjmEK82YJb1x6WzPcZ5gy4wA==", "transaction"=>{"account_id"=>"1", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"1", "category"=>"rf", "comment"=>"45", "amount"=>"12", "done"=>"1"}, "commit"=>"Create Transaction", "account_id"=>"1"}
+  [1m[36mAccount Load (15.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "transactions" ("account_id", "date", "category", "comment", "amount", "done", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_id", 1], ["date", "2015-02-01"], ["category", "rf"], ["comment", "45"], ["amount", 12.0], ["done", "t"], ["created_at", "2017-08-02 09:27:05.241985"], ["updated_at", "2017-08-02 09:27:05.241985"]]
+  [1m[35m (140.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/accounts/1
+Completed 302 Found in 172ms (ActiveRecord: 156.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:27:05 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of transactions/_transaction.html.erb [2 times] (15.6ms)
+  Rendered accounts/show.html.erb within layouts/application (46.8ms)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `account' for nil:NilClass):
+    1: <h3>Transaction</h3>
+    2: <p>
+    3:   <strong>Account:</strong>
+    4:   <%= @transaction.account %>
+    5: </p>
+    6: 
+    7: <p>
+  
+app/views/transactions/_transaction.html.erb:4:in `_app_views_transactions__transaction_html_erb__342741271_79240212'
+app/views/accounts/show.html.erb:9:in `_app_views_accounts_show_html_erb__678498945_92043480'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:28:50 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of transactions/_transaction.html.erb [2 times] (0.0ms)
+  Rendered transactions/_form.html.erb (0.0ms)
+  Rendered accounts/show.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 187ms (Views: 166.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:29:11 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered collection of transactions/_transaction.html.erb [2 times] (1.0ms)
+  Rendered transactions/_form.html.erb (6.0ms)
+  Rendered accounts/show.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 185ms (Views: 162.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:35:37 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/bat/Documents/informatique/web/ruby/rails/appAm/app/views/accounts/show.html.erb:15: syntax error, unexpected keyword_end
+  	'.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+  	                                    ^
+C:/Users/bat/Documents/informatique/web/ruby/rails/appAm/app/views/accounts/show.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Users/bat/Documents/informatique/web/ruby/rails/appAm/app/views/accounts/show.html.erb:28: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/accounts/show.html.erb:15: syntax error, unexpected keyword_end
+app/views/accounts/show.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/accounts/show.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:36:49 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered transactions/_form.html.erb (6.0ms)
+  Rendered accounts/show.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 187ms (Views: 163.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:37:23 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered transactions/_form.html.erb (5.0ms)
+  Rendered accounts/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 175ms (Views: 152.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:37:42 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered transactions/_form.html.erb (7.0ms)
+  Rendered accounts/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 175ms (Views: 151.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:38:00 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered transactions/_form.html.erb (6.0ms)
+  Rendered accounts/show.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 176ms (Views: 155.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2017-08-02 11:40:00 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."account_id" = ?[0m  [["account_id", 1]]
+  Rendered transactions/_form.html.erb (7.0ms)
+  Rendered accounts/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 172ms (Views: 149.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transaction" for 127.0.0.1 at 2017-08-02 11:40:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/transaction"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/transactions" for 127.0.0.1 at 2017-08-02 11:40:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/transactions"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'

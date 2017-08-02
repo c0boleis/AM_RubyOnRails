@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account number:</strong>
+  <%= @account.account_number %>
+</p>
+<p>
+  <TABLE BORDER="1"> 
+  	<CAPTION> Transactions </CAPTION>
+  	<TR> 
+ 		<TH> Account </TH> 
+ 		<TH> Date</TH>
+ 		<TH> Category </TH> 
+ 		<TH> Comment</TH>
+ 		<TH> Amount</TH>
+ 		<TH> Done</TH>
+  	</TR> 
+  	<% @account.transactions.each do |transaction| %>
+  		<TR> 
+ 			<TH> <%= transaction.account.account_number %> </TH> 
+ 			<TH> <%= transaction.date %></TH>
+ 			<TH> <%= transaction.category %> </TH> 
+ 			<TH> <%= transaction.comment %></TH>
+ 			<TH> <%= transaction.amount %> </TH> 
+ 			<TH> <%= transaction.done %></TH>
+  		</TR> 
+  	<% end %>
+	</TABLE> 
+  <strong>Transactions:</strong>
+  <h2>Add a comment:</h2>
+	<%= render 'transactions/form' %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
